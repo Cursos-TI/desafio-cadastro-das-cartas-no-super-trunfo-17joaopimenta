@@ -7,6 +7,7 @@
 //Teste larissa
 
 int main() {
+    //Carta 1
     //Variavel que armazena as letras dos oito primeiros estados (A a H)
     char estado1;
     /*
@@ -24,7 +25,12 @@ int main() {
         PIB: PIB da cidade
     */
     float area1, pib1;
+    //Densidade demografica
+    float densidade1;
+    //Pib per capita do local
+    float pibPerCapita1;
 
+    //Carta 2
     //Variavel que armazena as letras dos oito primeiros estados (A a H)
     char estado2;
     /*
@@ -42,6 +48,11 @@ int main() {
         PIB: PIB da cidade
     */
     float area2, pib2;
+    
+    //Densidade demografica
+    float densidade2;
+    //Pib per capita do local
+    float pibPerCapita2;
 
     //Carta1 (Documentacoes que o usuario ira colocar)
     printf("Carta1\n");
@@ -67,6 +78,9 @@ int main() {
     printf("PIB: ");
     scanf("%f", &pib1);
 
+    densidade1 = populacao1/area1;
+    pibPerCapita1 = (pib1*1e9)/(float)populacao1;
+
     //Carta2 (Documentacoes que o usuario ira colocar)
     printf("\nCarta2\n");
     
@@ -91,9 +105,12 @@ int main() {
     printf("PIB: ");
     scanf("%f", &pib2);
 
+    densidade2 = populacao2/area2;
+    pibPerCapita2 = (pib2*1e9)/populacao2;
+
     //Escrever os valores de cada carta
-    printf("\nCarta1\nEstado: %c\nCodigo: %s\nNome da Cidade: %s\nPopulacao: %i\nQuantidade de pontos turisticos: %i\nArea: %.2fkm²\nPIB: %.2f bilhoes de reais\n",estado1,codigoCarta1,nomeCidade1,populacao1,quantidadePontosTuristicos1,area1,pib1);
-    printf("\nCarta2\nEstado: %c\nCodigo: %s\nNome da Cidade: %s\nPopulacao: %i\nQuantidade de pontos turisticos: %i\nArea: %.2fkm²\nPIB: %.2f bilhoes de reais",estado2,codigoCarta2,nomeCidade2,populacao2,quantidadePontosTuristicos2,area2,pib2);
+    printf("\nCarta1\nEstado: %c\nCodigo: %s\nNome da Cidade: %s\nPopulacao: %i\nQuantidade de pontos turisticos: %i\nArea: %.2fkm²\nPIB: %.2f bilhoes de reais\nDensidade Populacional: %.2fhab/km²\nPIB per Capita: %.2f reais\n",estado1,codigoCarta1,nomeCidade1,populacao1,quantidadePontosTuristicos1,area1,pib1,densidade1, pibPerCapita1);
+    printf("\nCarta2\nEstado: %c\nCodigo: %s\nNome da Cidade: %s\nPopulacao: %i\nQuantidade de pontos turisticos: %i\nArea: %.2fkm²\nPIB: %.2f bilhoes de reais\nDensidade Populacional: %.2fhab/km²\nPIB per Capita: %.2f reais\n",estado2,codigoCarta2,nomeCidade2,populacao2,quantidadePontosTuristicos2,area2,pib2,densidade2, pibPerCapita2);
 
     return 0;
 }
