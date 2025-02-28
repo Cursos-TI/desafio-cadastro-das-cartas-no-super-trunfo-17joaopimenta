@@ -20,7 +20,8 @@ int main() {
         Populacao: Numero total da populacao
         Quantidade Pontos Turisticos: Numero de pontos turisticos
     */
-    int populacao1, quantidadePontosTuristicos1;
+    unsigned long int populacao1; 
+    int quantidadePontosTuristicos1;
     /*
         Area: area da cidade
         PIB: PIB da cidade
@@ -46,7 +47,8 @@ int main() {
     Populacao: Numero total da populacao
     Quantidade Pontos Turisticos: Numero de pontos turisticos
     */
-    int populacao2, quantidadePontosTuristicos2;
+    unsigned long int populacao2;
+    int quantidadePontosTuristicos2;
     /*
     Area: area da cidade
     PIB: PIB da cidade
@@ -83,10 +85,10 @@ int main() {
     scanf("%s", &nomeCidade1);
     
     printf("Populacao: ");
-    scanf("%i", &populacao1);
+    scanf("%ld", &populacao1);
 
     printf("Quantidade de pontos turisticos: ");
-    scanf("%i", &quantidadePontosTuristicos1);
+    scanf("%d", &quantidadePontosTuristicos1);
 
     printf("Area: ");
     scanf("%f", &area1);
@@ -113,10 +115,10 @@ int main() {
     scanf("%s", &nomeCidade2);
     
     printf("Populacao: ");
-    scanf("%i", &populacao2);
+    scanf("%ld", &populacao2);
     
     printf("Quantidade de pontos turisticos: ");
-    scanf("%i", &quantidadePontosTuristicos2);
+    scanf("%d", &quantidadePontosTuristicos2);
     
     printf("Area: ");
     scanf("%f", &area2);
@@ -152,6 +154,7 @@ int main() {
     else strcpy(vitoriaSuperPoder,"Carta2");
 
     //Escrever a situação de vitória das cartas
+    
     printf("\nComparação entre cartas\n");
     printf("Populacao: %s venceu (%d)\n", vitoriaPopulacao, populacao1 > populacao2);
     printf("Area: %s venceu (%d)\n", vitoriaArea, area1 > area2);
